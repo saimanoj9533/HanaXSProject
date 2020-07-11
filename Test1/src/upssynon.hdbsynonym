@@ -4,5 +4,11 @@
       "object": "TEST",
       "schema": "864424"
     }
+  },
+  "TEST": {
+    "target": {
+      "object": "TEST",
+      "schema": "864424"
+    }
   }
 }
