@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="TestDaily" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="TestDaily"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Daily_1">
+    <resourceUri>Daily_1</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="sno"/>
+      <viewAttribute id="name"/>
+      <viewAttribute id="Amount"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Daily_1"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="sno" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="sno"/>
+      <keyMapping columnObjectName="Projection_1" columnName="sno"/>
+    </attribute>
+    <attribute id="name" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="name"/>
+      <keyMapping columnObjectName="Projection_1" columnName="name"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="Amount" order="3" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Amount"/>
+      <measureMapping columnObjectName="Projection_1" columnName="Amount"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="92" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
