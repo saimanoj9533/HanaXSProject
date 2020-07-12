@@ -10,5 +10,11 @@
       "object": "TEST",
       "schema": "864424"
     }
+  },
+  "Test2": {
+    "target": {
+      "object": "TEST",
+      "schema": "864424"
+    }
   }
 }
